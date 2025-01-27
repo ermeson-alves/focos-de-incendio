@@ -1,0 +1,357 @@
+/* Navbar */
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+nav {
+    height: 4vh;
+    background-color: #332E2B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 2px 20px 2px 60px; */
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li:not(:first-child){
+    margin-left: 100px;
+}
+
+nav ul li a {
+    padding: 0 2em;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+}
+
+
+#highcontrast {
+    width: 24px;
+}
+
+
+/* Secção principal */
+/* main {
+    height: 94vh;
+} */
+#mainsection {
+    height: 96vh;
+    background-color: black;
+}
+
+#header-mainsection {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 25px 0 150px 0;
+}
+
+#funcoes-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.funcao {
+    background-color: #AA6A43;
+    margin: 0 6% 0 6%;
+    padding: 5% 10% 5% 10%;
+    border-radius: 5%;
+    font-size: 22px;
+    color: white;
+}
+
+
+/* Secção sobre nós */
+#history {
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #AA6A43;
+}
+#history p {
+    width: 30%;
+}
+
+#history img {
+    width: 20%;
+}
+
+#statistics {
+    display: flex;
+    align-items: center;
+    height: 45vh;
+    background-color: white;
+    /* padding: 2em 4em 2em 4em; */
+}
+
+#inner-statistics {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #FF6D0F;
+    margin: 12% 7% 12% 7%;
+}
+
+.statistics-container {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#inner-statistics img {
+    width: 30%;
+}
+
+#inner-statistics p {
+    width: 300px;
+}
+
+
+
+/* Footer */
+footer {
+    height: 10vh;
+    background-color: #332E2B;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+footer ul li {
+    margin: auto;
+    padding-top: 10px;
+}
+
+footer ul li a {
+    padding: 0 2em;
+    color: white;
+}
+
+/*Pagina Login*/
+
+#body-login {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.login-container {
+    background-color: #55473E;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF6D0F;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-button:hover {
+    background-color: #D56F30;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Menu Lateral */
+
+#body-lateral {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+#body-lateral .sidebar {
+    width: 250px;
+    background-color: #33302e;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #D56F30;
+}
+
+/* Estilo do botão */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.sidebar .logout-button {
+    background-color: #FF6D0F; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado */
+    margin-top: 200px; /* Espaçamento acima do botão */
+}
+
+.sidebar .logout-button:hover {
+    background-color: #D56F30; /* Cor de fundo ao passar o mouse */
+}
+
+.content-table {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Estilo da tabela */
+.table-container {
+    background-color: #FF6D0F; 
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 50vh;
+}
+
+.table-container h2{
+    margin-top: 0;
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #B9B9B9;
+}
+
+td{
+    background-color: #fff;
+}
+
+/* Estilo do botão de adicionar linha */
+.add-row-button {
+    background-color: #55473E; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    margin-top: 10px; /* Espaçamento acima do botão */
+}
+
+.add-row-button:hover {
+    background-color: #805d47; /* Cor de fundo ao passar o mouse */
+}
+
+.legenda{
+    margin-top: 50px;
+    color: #fff;
+
+}
+
+/* Página Geral */
+.content-grafics {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Estilo da seção com divs */
+.div-section {
+    display: flex; /* Alinha as divs horizontalmente */
+    justify-content: space-between; /* Espaçamento entre as divs */
+    margin-top: 20px; /* Espaçamento acima da seção */
+}
+
+.box {
+    background-color: #FF6D0F; /* Fundo laranja */
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%; /* Largura de cada box */
+    height: 50vh;
+    text-align: center; /* Centraliza o texto */
+    color: #fff;
+}
+
+.box img {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    max-width: 100%; /* Imagem responsiva */
+    border-radius: 5px; /* Bordas arredondadas */
+    height: auto; /* Mantém a proporção da imagem */
+}

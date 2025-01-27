@@ -43,7 +43,7 @@ nav ul li a {
 } */
 #mainsection {
     height: 96vh;
-    background-image: linear-gradient(#FF6D0F, #FF6D0F, white);
+    background-image: linear-gradient(#FF6D0F, white);
 }
 
 #header-mainsection {
@@ -62,10 +62,29 @@ nav ul li a {
 
 
 .funcao {
+    width: 33%;
     background-color: #AA6A43;
     margin: 0 6% 0 6%;
-    padding: 5% 10% 5% 10%;
+    padding: 2% 6% 2% 6%;
     border-radius: 5%;
+    color: white;
+    font-size: 15px;
+    text-align: justify;
+}
+
+#end-mainsection {
+    width: 100%;
+    color: white;
+    padding: 150px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#end-mainsection p {
+    font-size: 20px;
+    width: 80%;
 }
 
 
