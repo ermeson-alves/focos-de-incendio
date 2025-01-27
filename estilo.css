@@ -7,18 +7,22 @@
 nav {
     height: 4vh;
     background-color: #332E2B;
-    padding: 2px 20px 2px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 2px 20px 2px 60px; */
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
+    align-items: center;
     list-style: none;
     padding: 0;
 }
 
-nav ul li {
-    margin: auto;
+nav ul li:not(:first-child){
+    margin-left: 100px;
 }
 
 nav ul li a {
@@ -40,6 +44,28 @@ nav ul li a {
 #mainsection {
     height: 96vh;
     background-image: linear-gradient(#FF6D0F, #FF6D0F, white);
+}
+
+#header-mainsection {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 25px 0 150px 0;
+}
+
+#funcoes-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.funcao {
+    background-color: #AA6A43;
+    margin: 0 6% 0 6%;
+    padding: 5% 10% 5% 10%;
+    border-radius: 5%;
 }
 
 
@@ -150,6 +176,7 @@ footer ul li a {
 .input-group input {
     width: 100%;
     padding: 10px;
+    box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
