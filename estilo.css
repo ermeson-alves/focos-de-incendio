@@ -295,32 +295,33 @@ td{
 
 }
 
-/* Página chamados */
-.image-section {
-    background-color: #ffcc00; /* Fundo laranja */
+/* Página Geral */
+.content-grafics {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Estilo da seção com divs */
+.div-section {
+    display: flex; /* Alinha as divs horizontalmente */
+    justify-content: space-between; /* Espaçamento entre as divs */
+    margin-top: 20px; /* Espaçamento acima da seção */
+}
+
+.box {
+    background-color: #FF6D0F; /* Fundo laranja */
     padding: 20px;
     border-radius: 5px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.image-box {
     width: 30%; /* Largura de cada box */
-    text-align: center; /* Centraliza o conteúdo */
+    height: 50vh;
+    text-align: center; /* Centraliza o texto */
+    color: #fff;
 }
 
-.image-box img {
+.box img {
+    margin-top: 20px;
+    margin-bottom: 30px;
     max-width: 100%; /* Imagem responsiva */
     border-radius: 5px; /* Bordas arredondadas */
-}
-
-.image-title {
-    font-weight: bold; /* Título em negrito */
-    margin-top: 10px; /* Espaçamento acima do título */
-}
-
-.image-caption {
-    font-size: 14px; /* Tamanho da legenda */
-    color: #555; /* Cor da legenda */
+    height: auto; /* Mantém a proporção da imagem */
 }
