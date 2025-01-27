@@ -182,9 +182,15 @@ h2 {
 
 /*Menu Lateral*/
 
-.sidebar {
+#body-lateral {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+#body-lateral .sidebar {
     width: 250px;
-    background-color: #55473E;
+    background-color: #33302e;
     color: white;
     height: 100vh;
     padding: 20px;
@@ -228,4 +234,61 @@ h2 {
 
 .sidebar .logout-button:hover {
     background-color: #D56F30; /* Cor de fundo ao passar o mouse */
+}
+
+.content-table {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Estilo da tabela */
+.table-container {
+    background-color: #FF6D0F; 
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.table-container h2{
+    margin-top: 0;
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #B9B9B9;
+}
+
+td{
+    background-color: #fff;
+}
+
+/* Estilo do botão de adicionar linha */
+.add-row-button {
+    background-color: #55473E; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    margin-top: 10px; /* Espaçamento acima do botão */
+}
+
+.add-row-button:hover {
+    background-color: #805d47; /* Cor de fundo ao passar o mouse */
+}
+
+.legenda{
+    margin-top: 50px;
+
 }

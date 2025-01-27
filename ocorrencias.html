@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 
-<body>
+<body id="body-lateral">
 
   <div class="sidebar">
     <h2>Menu</h2>
@@ -18,6 +18,49 @@
     <a href="geral.html">Avaliação Geral</a>
     <a href="index.html" class="logout-button">Sair</a>
   </div>
+
+  <div class="content-table">
+
+    <div class="table-container">
+      <h2>Ocorrências</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo de Ocorrência</th>
+            <th>Responsável</th>
+            <th>Endereço</th>
+            <th>Data da Ocorrência</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Florestal</td>
+            <td>1º Companhia de Incêndio Florestal do Batalhão de Combate a Incêndio Florestal </td>
+            <td>Avenida do Aeroporto, Alto São Francisco – Quixadá</td>
+            <td>27/01/2025</td>
+          </tr>
+          <tr>
+            <td>Residencial</td>
+            <td>1ª Companhia de Busca e Salvamento do Batalhão de Busca e Salvamento</td>
+            <td>Av. Presidente Castelo Branco, 1000 – Moura Brasil – Fortaleza-CE</td>
+            <td>20/01/2025</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="add-row-button">Adicionar Ocorrência</button>
+
+      <div class="legenda">
+        <p>Legenda:
+          Tipo de Ocorrência: Classificação da Ocorrência (Florestal, Residencial, etc.)<br>
+          Responsável: Unidade responsável pela ocorrência.<br>
+          Endereço: Local da ocorrência.<br>
+          Data da Ocorrência: Data em que a ocorrência foi registrada.<br>
+        </p>
+      </div>
+    </div>
+
+    </div>
+
 
 </body>
 
