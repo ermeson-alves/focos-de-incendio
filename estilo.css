@@ -247,12 +247,16 @@ h2 {
     padding: 20px;
     border-radius: 5px;
     margin-top: 20px;
-    height: 50vh;
+    height: 60vh;
 }
 
 .table-container h2{
     margin-top: 0;
     color: #fff;
+    
+}
+.table-container h2 {
+    margin-top: 20px;
 }
 
 table {
@@ -325,3 +329,19 @@ td{
     border-radius: 5px; /* Bordas arredondadas */
     height: auto; /* Mantém a proporção da imagem */
 }
+
+/*Página Chamados*/
+
+/* Estilo do filtro de pesquisa */
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
