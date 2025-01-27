@@ -180,7 +180,7 @@ h2 {
     font-size: 14px;
 }
 
-/*Menu Lateral*/
+/* Menu Lateral */
 
 #body-lateral {
     font-family: Arial, sans-serif;
@@ -216,7 +216,7 @@ h2 {
     background-color: #D56F30;
 }
 
-/* Estilo do conteúdo principal */
+/* Estilo do botão */
 .content {
     flex: 1;
     padding: 20px;
@@ -229,7 +229,7 @@ h2 {
     padding: 10px; /* Espaçamento interno */
     border-radius: 4px; /* Bordas arredondadas */
     text-decoration: none; /* Remove o sublinhado */
-    margin-top: 20px; /* Espaçamento acima do botão */
+    margin-top: 200px; /* Espaçamento acima do botão */
 }
 
 .sidebar .logout-button:hover {
@@ -247,6 +247,7 @@ h2 {
     padding: 20px;
     border-radius: 5px;
     margin-top: 20px;
+    height: 50vh;
 }
 
 .table-container h2{
@@ -292,4 +293,34 @@ td{
     margin-top: 50px;
     color: #fff;
 
+}
+
+/* Página chamados */
+.image-section {
+    background-color: #ffcc00; /* Fundo laranja */
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-box {
+    width: 30%; /* Largura de cada box */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.image-box img {
+    max-width: 100%; /* Imagem responsiva */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.image-title {
+    font-weight: bold; /* Título em negrito */
+    margin-top: 10px; /* Espaçamento acima do título */
+}
+
+.image-caption {
+    font-size: 14px; /* Tamanho da legenda */
+    color: #555; /* Cor da legenda */
 }
