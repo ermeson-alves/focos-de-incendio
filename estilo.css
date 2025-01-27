@@ -118,7 +118,7 @@ footer ul li a {
 
 /*Pagina Login*/
 
-body {
+#body-login {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     display: flex;
@@ -136,10 +136,6 @@ body {
     width: 300px;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
 
 .input-group {
     margin-bottom: 15px;
@@ -157,10 +153,15 @@ h2 {
     border-radius: 3px;
 }
 
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .login-button {
     width: 100%;
     padding: 10px;
-    background-color: #28a745;
+    background-color: #FF6D0F;
     color: white;
     border: none;
     border-radius: 3px;
@@ -169,7 +170,7 @@ h2 {
 }
 
 .login-button:hover {
-    background-color: #218838;
+    background-color: #332E2B;
 }
 
 .footer {
