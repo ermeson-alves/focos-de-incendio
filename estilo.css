@@ -69,12 +69,12 @@ nav ul li a {
     border-radius: 5%;
     color: white;
     font-size: 15px;
-    text-align: justify;
+    text-align: left;
 }
 
 #end-mainsection {
     width: 100%;
-    color: white;
+    color: black;
     padding: 150px 0 0 0;
     display: flex;
     flex-direction: row;
@@ -118,6 +118,7 @@ nav ul li a {
     flex-direction: row;
     justify-content: center;
     background-color: #FF6D0F;
+    border-radius: 20px;
     margin: 12% 7% 12% 7%;
 }
 
@@ -240,6 +241,7 @@ h2 {
     color: white;
     height: 100vh;
     padding: 20px;
+    box-sizing: border-box; /* Para que o padding não crie excedentes*/ 
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -284,25 +286,26 @@ h2 {
 
 .content-table {
     flex: 1;
+    height: 100vh;
     padding: 20px;
+    box-sizing: border-box; /* Para que o padding não crie excedentes*/
+    display: flex;
+    align-items: center;
 }
 
 /* Estilo da tabela */
 .table-container {
     background-color: #FF6D0F; 
     padding: 20px;
+    box-sizing: border-box; /* Para que o padding não crie excedentes*/
     border-radius: 5px;
-    margin-top: 20px;
-    height: 60vh;
+    height: 90vh;
 }
 
 .table-container h2{
     margin-top: 0;
     color: #fff;
-    
-}
-.table-container h2 {
-    margin-top: 20px;
+    margin-top: 20px;   
 }
 
 table {
@@ -349,21 +352,27 @@ td{
 .content-grafics {
     flex: 1;
     padding: 20px;
+    height: 100vh;
+    box-sizing: border-box; /* Para que o padding não crie excedentes*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Estilo da seção com divs */
 .div-section {
     display: flex; /* Alinha as divs horizontalmente */
     justify-content: space-between; /* Espaçamento entre as divs */
-    margin-top: 20px; /* Espaçamento acima da seção */
+    /* margin-top: 20px; */
 }
 
 .box {
     background-color: #FF6D0F; /* Fundo laranja */
     padding: 20px;
+    box-sizing: border-box; /* Para que o padding não crie excedentes*/
     border-radius: 5px;
     width: 30%; /* Largura de cada box */
-    height: 50vh;
+    height: 65vh;
     text-align: center; /* Centraliza o texto */
     color: #fff;
 }

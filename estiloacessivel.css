@@ -29,7 +29,6 @@ nav ul li a {
     padding: 0 2em;
     text-decoration: none;
     color: white;
-    font-size: 22px;
 }
 
 
@@ -44,7 +43,7 @@ nav ul li a {
 } */
 #mainsection {
     height: 96vh;
-    background-color: black;
+    background-image: linear-gradient(#C14B00, #1A1B1B);
 }
 
 #header-mainsection {
@@ -63,23 +62,41 @@ nav ul li a {
 
 
 .funcao {
-    background-color: #AA6A43;
+    width: 33%;
+    background-color: #953E07;
     margin: 0 6% 0 6%;
-    padding: 5% 10% 5% 10%;
+    padding: 2% 6% 2% 6%;
     border-radius: 5%;
-    font-size: 22px;
     color: white;
+    font-size: 15px;
+    text-align: left;
+}
+
+#end-mainsection {
+    width: 100%;
+    color: white;
+    padding: 150px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#end-mainsection p {
+    font-size: 20px;
+    width: 80%;
 }
 
 
 /* Secção sobre nós */
 #history {
+    color: white;
     height: 45vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #AA6A43;
+    background-color: #332E2B;
 }
 #history p {
     width: 30%;
@@ -93,7 +110,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     height: 45vh;
-    background-color: white;
+    background-color: black;
     /* padding: 2em 4em 2em 4em; */
 }
 
@@ -101,11 +118,13 @@ nav ul li a {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #FF6D0F;
+    border-radius: 20px;
+    background-color: #332E2B;
     margin: 12% 7% 12% 7%;
 }
 
 .statistics-container {
+    color: white;
     width: 30%;
     display: flex;
     flex-direction: row;
@@ -149,7 +168,7 @@ footer ul li a {
 
 #body-login {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #332E2B;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,7 +178,7 @@ footer ul li a {
 }
 
 .login-container {
-    background-color: #55473E;
+    background-color: black;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -192,7 +211,7 @@ h2 {
 .login-button {
     width: 100%;
     padding: 10px;
-    background-color: #FF6D0F;
+    background-color: #332E2B;
     color: white;
     border: none;
     border-radius: 10px;
@@ -224,6 +243,7 @@ h2 {
     color: white;
     height: 100vh;
     padding: 20px;
+    box-sizing: border-box; /* Para que o padding não crie excedentes*/ 
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -243,7 +263,7 @@ h2 {
 }
 
 .sidebar a:hover {
-    background-color: #D56F30;
+    background-color: #AA6A43;
 }
 
 /* Estilo do botão */
@@ -253,7 +273,7 @@ h2 {
 }
 
 .sidebar .logout-button {
-    background-color: #FF6D0F; /* Cor de fundo do botão */
+    background-color: black; /* Cor de fundo do botão */
     color: white; /* Cor do texto */
     text-align: center; /* Centraliza o texto */
     padding: 10px; /* Espaçamento interno */
@@ -263,26 +283,32 @@ h2 {
 }
 
 .sidebar .logout-button:hover {
-    background-color: #D56F30; /* Cor de fundo ao passar o mouse */
+    background-color: #AA6A43; /* Cor de fundo ao passar o mouse */
 }
 
 .content-table {
+    background-color: #332E2B;
     flex: 1;
+    height: 100vh;
     padding: 20px;
+    box-sizing: border-box; /* Para que o padding não crie excedentes*/
+    display: flex;
+    align-items: center;
 }
 
 /* Estilo da tabela */
 .table-container {
-    background-color: #FF6D0F; 
+    background-color: black; 
     padding: 20px;
+    box-sizing: border-box; /* Para que o padding não crie excedentes*/
     border-radius: 5px;
-    margin-top: 20px;
-    height: 50vh;
+    height: 90vh;
 }
 
 .table-container h2{
     margin-top: 0;
     color: #fff;
+    margin-top: 20px;
 }
 
 table {
@@ -329,21 +355,29 @@ td{
 .content-grafics {
     flex: 1;
     padding: 20px;
+    height: 100vh;
+    box-sizing: border-box; /* Para que o padding não crie excedentes*/
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Estilo da seção com divs */
 .div-section {
     display: flex; /* Alinha as divs horizontalmente */
     justify-content: space-between; /* Espaçamento entre as divs */
-    margin-top: 20px; /* Espaçamento acima da seção */
+    /* height: 70vh; */
+    /* margin-top: 20px;  */
 }
 
 .box {
     background-color: #FF6D0F; /* Fundo laranja */
     padding: 20px;
+    box-sizing: border-box; /* Para que o padding não crie excedentes*/
     border-radius: 5px;
     width: 30%; /* Largura de cada box */
-    height: 50vh;
+    height: 65vh;
     text-align: center; /* Centraliza o texto */
     color: #fff;
 }
@@ -354,4 +388,18 @@ td{
     max-width: 100%; /* Imagem responsiva */
     border-radius: 5px; /* Bordas arredondadas */
     height: auto; /* Mantém a proporção da imagem */
+}
+
+/*Página Chamados*/
+
+/* Estilo do filtro de pesquisa */
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
