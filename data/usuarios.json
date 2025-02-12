@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nome": "user1", 
+        "senha": 1234,
+        "atribuicao": "bombeiro"
+    },
+    {
+        "id": 2,
+        "nome": "user2", 
+        "senha": 1234,
+        "atribuicao": "gerente"
+    },
+    {
+        "id": 3,
+        "nome": "user3", 
+        "senha": 1234,
+        "atribuicao": "admin"
+    }
+]

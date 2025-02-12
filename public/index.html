@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FireDetector</title>
-    <link id="themeStylesheet" rel="stylesheet" type="text/css" href="estilo.css">
+    <link id="themeStylesheet" rel="stylesheet" type="text/css" href="css/estilo.css">
     <link rel="icon" type="image/x-icon" href="imgs/favicon_io/favicon.png">
 </head>
 
@@ -95,20 +95,6 @@
         </ul>
     </footer>
 
-    <script>
-        function toggleTheme() {
-            let themeLink = document.getElementById('themeStylesheet');
-            let currentTheme = themeLink.getAttribute('href');
-
-            // Alterna entre os estilos
-            if (currentTheme === 'estilo.css') {
-                themeLink.setAttribute('href', 'estiloacessivel.css');
-            } else {
-                themeLink.setAttribute('href', 'estilo.css');
-            }
-            console.log('OPAA');
-            
-        }
-    </script>
+    <script src="js/acessibilidade.js"></script>
 </body>
 </html>
