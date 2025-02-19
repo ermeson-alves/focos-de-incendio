@@ -1,20 +1,20 @@
 [
     {
         "id": 1,
-        "nome": "user1", 
-        "senha": 1234,
+        "username": "user1", 
+        "password": "e7c79786927bb18d36309449e455367416426d464aa2994f052234a16eb639c284af31f6f955d7f3345f84163ebcbbf39dafe88d82c96a16aa461f394c353573",
         "atribuicao": "bombeiro"
     },
     {
         "id": 2,
-        "nome": "user2", 
-        "senha": 1234,
+        "username": "user2", 
+        "password": "b4a2cd7fa33f5b6b60d467b982e913fe7350e1d3b3e8c3d274a692a26f90bbb08b28010f52e46ef192b343f94e8f11b6f3533deeaf9f2b615b3389e8c8243a07",
         "atribuicao": "gerente"
     },
     {
         "id": 3,
-        "nome": "user3", 
-        "senha": 1234,
-        "atribuicao": "admin"
+        "username": "user3", 
+        "password": 1234,
+        "atribuicao": "f48036f70227cb6ad5d947c73097d37d875fe776bd6c2e6512cd415b2706c2fbe0010565e776f0cf1d865c8ef2b9755aec34be257b478dafad0ba892028e5d58"
     }
 ]

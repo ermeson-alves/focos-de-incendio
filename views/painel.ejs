@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel</title>
+  <link id="themeStylesheet" rel="stylesheet" type="text/css" href="/css/estilo.css">
+  <link rel="icon" type="image/x-icon" href="imgs/favicon_io/favicon.png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body id="body-lateral">
+
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <div class="sidebarimg-container">
+      <img class="sidebarimg" src="imgs/contrast.png" onclick="toggleTheme()" alt="">
+      <img class="sidebarimg" src="imgs/diminuirfonte.png" onclick="diminuirFonte()" alt="">
+      <img class="sidebarimg" src="imgs/aumentarfonte.png" onclick="aumentarFonte()" alt="">
+    </div>
+    <hr>
+    <p>Tipo de usuário: <%= user %></p>
+    <hr>
+    <!-- BASEADO NO USUARIO: ------ -->
+    <% if (user === 1) { %>
+      <a href="chamados.html">Chamados</a>
+    <% } else if (user === 2) { %>
+      <a href="ocorrencias.html">Ocorrências</a>
+      <% } else if (user === 3) { %>
+        <a href="geral.html">Avaliação Geral</a>
+    <% } %>
+    <a href="index.html" class="logout-button">Sair</a>
+  </div>
+
+  <% if (user !== 3) { %>
+    <div class="content-table">
+      <div class="table-container">
+        <% if (user === 1) { %>
+          <h2>Seus Chamados</h2>
+        <% } %>
+        
+        <% if (user === 2) { %>
+          <h2>Ocorrências</h2>
+        <% } %>
+    
+        <div class="search-container">
+          <input type="text" placeholder="Pesquisar...">
+        </div>
+    
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo de Ocorrência</th>
+              <th>Responsável</th>
+              <th>Endereço</th>
+              <th>Data da Ocorrência</th>
+              <th>Hora da Ocorrência</th>
+              <% if (user === 1) { %> 
+                <th>Selecione</th>
+              <% } %>
+            </tr>
+          </thead>
+          <tbody id="tbody1">
+            <!-- Se for um membro do corpo de bombeiros, ele deve visualizar as ocorrencias pendentes nos chamados! -->
+            
+            <!-- Se for um Geremte, ele deve visualizar as ocorrencias concluidas! -->
+            <% if (user === 2) { %> 
+              <% for(i=0; i<data.ocorrencias.length; i++) {%>
+                <% if (data.ocorrencias[i].status === "concluida") { %> 
+                  <tr>
+                      <td> <%= data.ocorrencias[i].tipo %> </td>
+                      <td> <%= data.ocorrencias[i].responsavel %> </td>
+                      <td> <%= data.ocorrencias[i].endereco %> </td>
+                      <td> <%= data.ocorrencias[i].data %> </td>
+                      <td> <%= data.ocorrencias[i].hora %> </td>
+                  </tr>
+                <% } %>
+              <% } %>
+            <% } %>
+          </tbody>
+        </table>
+    
+        <!-- Se for um membro do corpo de bombeiros, exibir histórico! -->
+        <% if (user === 1) { %> 
+          <h2>Histórico de Ocorrências</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo de Ocorrência</th>
+                <th>Responsável</th>
+                <th>Endereço</th>
+                <th>Data da Ocorrência</th>
+                <th>Hora da Ocorrência</th>
+              </tr>
+            </thead>
+            <tbody id="tbody2">
+              <% for(i=0; i<data.ocorrencias.length; i++) {%>
+                <% if (data.ocorrencias[i].status === "concluida") { %> 
+                  <tr>
+                      <td> <%= data.ocorrencias[i].tipo %> </td>
+                      <td> <%= data.ocorrencias[i].responsavel %> </td>
+                      <td> <%= data.ocorrencias[i].endereco %> </td>
+                      <td> <%= data.ocorrencias[i].data %> </td>
+                      <td> <%= data.ocorrencias[i].hora %> </td>
+                  </tr>
+                <% } %>
+              <% } %>
+            </tbody>
+          </table>
+        <% } %>
+        
+      </div>  
+    </div>
+  <% } else { %>
+    <div class="content-grafics">
+      <div class="div-section">
+          <div class="box">
+              <h2>Tipos de Ocorrências</h2>
+              <canvas id="grafico1"></canvas>
+              <div class="legenda">
+                <p>Legenda:</p>
+                <p>Incêndio Florestal: Verde</p>
+                <p>Busca e salvamento: Vermelho</p>
+                <p>Incêndio Residencial: Azul</p>
+            </div>
+          </div>
+          <div class="box">
+              <h2>Ocorrências em processo</h2>
+              <canvas id="grafico2"></canvas>
+              <div class="legenda">
+                  <p>Legenda:</p>
+                  <p>Finalizadas: Verde</p>
+                  <p>Em processo: Vermelho</p>
+                  <p>Não atendidas: Azul</p>
+              </div>
+          </div>
+          <div class="box">
+              <h2>Média de atendimento</h2>
+              <canvas id="grafico3"></canvas>
+              <div class="legenda">
+                  <p>Legenda:</p>
+                  <p>2 - 5 horas: Verde</p>
+                  <p>5 - 10 horas: Vermelho</p>
+                  <p>10 horas ou mais: Azul</p>
+              </div>
+          </div>
+      </div>
+
+  <% } %>
+  
+  <!-- Acessibilidade -->
+  <script src="js/acessibilidade.js"></script>
+    
+  <!-- Dinamica do lado do cliente -->
+  <script>
+
+    function loadDocJSON(url, id, user) {
+        /* 
+        Utiliza a api fetch para requisições assincronas. Responsável 
+        pela geração de conteúdo com dinâmica do lado do Cliente.
+        */
+        fetch(url)
+            .then(response => {
+                response.json().then((data) => {
+                    document.getElementById(id).innerHTML = arrToTbody(data, id, user);
+                });
+            }).catch(err => {
+                console.error('Failed retrieving information', err);
+            });
+    }
+
+    function arrToTbody(response, id, user) {
+      /*
+      Responsável pelo preenchimento do corpo de uma determinada tabela.
+      */
+    
+        lista = response;
+        
+        str = ""
+        for (i=0; i < lista.length; i++) {
+          str += "<tr>";
+          str += "<td>" + lista[i].tipo + "</td>";
+          str += "<td>" + lista[i].responsavel + "</td>";
+          str += "<td>" + lista[i].endereco + "</td>";
+          str += "<td>" + lista[i].data + "</td>";
+          str += "<td>" + lista[i].hora + "</td>";
+          if (user === 1 && id === "tbody1") {
+            str += "<td><input type='checkbox'></td>";
+          }
+          str += "</tr>";
+        }
+        
+        return str;
+      }
+
+      <% if (user===1) { %>
+        loadDocJSON("/chamados", "tbody1", <%= user %>)
+        loadDocJSON("/historico", "tbody2", <%= user %>)
+      <% } else if (user===2) { %>
+        loadDocJSON("/ocorrencias", "tbody1", <%= user %>)
+      <% } else if (user===3) { %> // usuario admininstrador
+        function criarGraficoPizza(id, data) {
+          /* Formato dos dados:
+          data = {labels: ["l1", "l2", "..."], "values": [x, y, ...], "colors": ["#FFFFFf", "#FFFFFf", ...]}
+          */
+          new Chart(document.getElementById(id), {
+              type: 'pie',
+              data: {
+                  labels: data.labels,
+                  datasets: [{
+                      data: data.values,
+                      backgroundColor: data.colors
+                  }]
+              },
+              options: {
+                  responsive: true,
+                  plugins: {
+                      legend: { display: false },
+                      tooltip: { enabled: true },
+                      datalabels: {
+                          color: "white",
+                          font: { weight: "bold", size: 16 },
+                          formatter: (value, ctx) => `${value}%`
+                      }
+                  }
+              }
+          });
+      }
+
+      fetch("/estatisticas")
+      .then(response => {
+          response.json().then((data) => {
+            data.labels = Object.keys(data.tipo);
+            data.values = Object.values(data.tipo);
+            data.colors = ["#FFFFFF", "#FFFFFF", "#FFFFFF"];
+            criarGraficoPizza("grafico1", data["tipo"]);
+          });
+      }).catch(err => {
+          console.error('Failed retrieving information', err);
+      });
+
+      
+      // criarGraficoPizza("grafico2", dados[1]);
+      // criarGraficoPizza("grafico3", dados[2]);
+
+    <% } %>
+
+  </script>
+
+
+
+</body>
+
+</html>

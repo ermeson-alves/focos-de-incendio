@@ -32,7 +32,7 @@ nav ul li a {
 }
 
 
-#highcontrast {
+.navimg {
     width: 24px;
 }
 
@@ -68,7 +68,6 @@ nav ul li a {
     padding: 2% 6% 2% 6%;
     border-radius: 5%;
     color: white;
-    font-size: 15px;
     text-align: left;
 }
 
@@ -83,7 +82,6 @@ nav ul li a {
 }
 
 #end-mainsection p {
-    font-size: 20px;
     width: 80%;
 }
 
@@ -245,9 +243,20 @@ h2 {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
+.sidebarimg-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.sidebarimg {
+    width: 24px;
+}
+
 .sidebar h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .sidebar a {
@@ -256,6 +265,16 @@ h2 {
     text-decoration: none;
     padding: 10px;
     margin: 5px 0;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar p {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 0 0;
     border-radius: 4px;
     transition: background-color 0.3s;
 }
@@ -300,6 +319,7 @@ h2 {
     box-sizing: border-box; /* Para que o padding não crie excedentes*/
     border-radius: 5px;
     height: 90vh;
+    width: 100%;
 }
 
 .table-container h2{
