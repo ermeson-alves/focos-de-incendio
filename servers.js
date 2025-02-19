@@ -14,7 +14,7 @@ const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 // Constantes
 const PORT = 9000
-const user = 1;
+const user = 3;
 
 
 const lerJSON = (arquivo) => {
@@ -128,6 +128,13 @@ app.get("/estatisticas", (req, res) => {
     // Agrupamento por tipo e por status 'em andamento'
     var dataFiltered = data.ocorrencias.filter(ocorrencia => ocorrencia.status === 'em andamento')
     dataFormatted['em andamento'] = dataFiltered.reduce((acc, ocorrencia) => {
+        acc[ocorrencia.tipo] = (acc[ocorrencia.tipo] || 0) + 1;
+        return acc;
+    }, {});
+
+    // Agrupamento por tipo e por status 'concluida'
+    var dataFiltered = data.ocorrencias.filter(ocorrencia => ocorrencia.status === 'concluida')
+    dataFormatted['concluida'] = dataFiltered.reduce((acc, ocorrencia) => {
         acc[ocorrencia.tipo] = (acc[ocorrencia.tipo] || 0) + 1;
         return acc;
     }, {});

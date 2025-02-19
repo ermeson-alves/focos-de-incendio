@@ -94,32 +94,32 @@
           <div class="box">
               <h2>Tipos de Ocorrências</h2>
               <canvas id="grafico1"></canvas>
-              <div class="legenda">
+              <!-- <div class="legenda">
                 <p>Legenda:</p>
                 <p>Incêndio Florestal: Verde</p>
                 <p>Busca e salvamento: Vermelho</p>
                 <p>Incêndio Residencial: Azul</p>
-            </div>
+            </div> -->
           </div>
           <div class="box">
               <h2>Ocorrências em processo</h2>
               <canvas id="grafico2"></canvas>
-              <div class="legenda">
+              <!-- <div class="legenda">
                   <p>Legenda:</p>
                   <p>Finalizadas: Verde</p>
                   <p>Em processo: Vermelho</p>
                   <p>Não atendidas: Azul</p>
-              </div>
+              </div> -->
           </div>
           <div class="box">
-              <h2>Média de atendimento</h2>
+              <h2>Concluidas</h2>
               <canvas id="grafico3"></canvas>
-              <div class="legenda">
+              <!-- <div class="legenda">
                   <p>Legenda:</p>
                   <p>2 - 5 horas: Verde</p>
                   <p>5 - 10 horas: Vermelho</p>
                   <p>10 horas ou mais: Azul</p>
-              </div>
+              </div> -->
           </div>
       </div>
 
@@ -206,11 +206,38 @@
 
       fetch("/estatisticas")
       .then(response => {
-          response.json().then((data) => {
+            response.json().then((data) => {
             data.labels = Object.keys(data.tipo);
             data.values = Object.values(data.tipo);
-            data.colors = ["#FFFFFF", "#FFFFFF", "#FFFFFF"];
-            criarGraficoPizza("grafico1", data["tipo"]);
+            data.colors = ["#FF6D0F", "#33302e", "#AA6A43"]; 
+            console.log(data);
+            criarGraficoPizza("grafico1", data);
+          });
+      }).catch(err => {
+          console.error('Failed retrieving information', err);
+      });
+
+      fetch("/estatisticas")
+      .then(response => {
+            response.json().then((data) => {
+            data.labels = Object.keys(data['em andamento']);
+            data.values = Object.values(data['em andamento']);
+            data.colors = ["#FF6D0F", "#33302e", "#AA6A43"]; 
+            console.log(data);
+            criarGraficoPizza("grafico2", data);
+          });
+      }).catch(err => {
+          console.error('Failed retrieving information', err);
+      });
+
+      fetch("/estatisticas")
+      .then(response => {
+            response.json().then((data) => {
+            data.labels = Object.keys(data['concluida']);
+            data.values = Object.values(data['concluida']);
+            data.colors = ["#AA6A43"]; 
+            console.log(data);
+            criarGraficoPizza("grafico3", data);
           });
       }).catch(err => {
           console.error('Failed retrieving information', err);
