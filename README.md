@@ -1,3 +1,13 @@
+# Execução
+```shell
+npm i  # instalar dependencias
+```
+```shell
+node server.js  # executar
+```
+
+
+
 # Organização dos Dados
 ## Ocorrências
 O esquema de uma ocorrencia é o seguinte:<br>
