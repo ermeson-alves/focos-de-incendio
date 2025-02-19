@@ -64,20 +64,7 @@
           <tbody id="tbody1">
             <!-- Se for um membro do corpo de bombeiros, ele deve visualizar as ocorrencias pendentes nos chamados! -->
             
-            <!-- Se for um Geremte, ele deve visualizar as ocorrencias concluidas! -->
-            <% if (user === 2) { %> 
-              <% for(i=0; i<data.ocorrencias.length; i++) {%>
-                <% if (data.ocorrencias[i].status === "concluida") { %> 
-                  <tr>
-                      <td> <%= data.ocorrencias[i].tipo %> </td>
-                      <td> <%= data.ocorrencias[i].responsavel %> </td>
-                      <td> <%= data.ocorrencias[i].endereco %> </td>
-                      <td> <%= data.ocorrencias[i].data %> </td>
-                      <td> <%= data.ocorrencias[i].hora %> </td>
-                  </tr>
-                <% } %>
-              <% } %>
-            <% } %>
+            <!-- Se for um Gerente, ele deve visualizar as ocorrencias concluidas! -->
           </tbody>
         </table>
     
@@ -95,17 +82,6 @@
               </tr>
             </thead>
             <tbody id="tbody2">
-              <% for(i=0; i<data.ocorrencias.length; i++) {%>
-                <% if (data.ocorrencias[i].status === "concluida") { %> 
-                  <tr>
-                      <td> <%= data.ocorrencias[i].tipo %> </td>
-                      <td> <%= data.ocorrencias[i].responsavel %> </td>
-                      <td> <%= data.ocorrencias[i].endereco %> </td>
-                      <td> <%= data.ocorrencias[i].data %> </td>
-                      <td> <%= data.ocorrencias[i].hora %> </td>
-                  </tr>
-                <% } %>
-              <% } %>
             </tbody>
           </table>
         <% } %>

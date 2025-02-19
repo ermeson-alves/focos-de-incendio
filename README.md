@@ -1,16 +1,18 @@
 # Organização dos Dados
 ## Ocorrências
 O esquema de uma ocorrencia é o seguinte:<br>
-{ <br>
-    "tipo": "", (String) <br>
-    "responsavel": "", (String) <br>
-    "endereco": "", (String) <br>
-    "data": "", (String) <br>
-    "hora": "", (String) <br>
-    <!-- "data finalizacao": "", (String)<br>
-    "hora finalizacao": "", (String) <br> -->
-    "status": "", (String) - Valores: ["concluida", "em andamento", "pendente"] <br>
-} <br>
+```json
+{
+    "tipo": "", (String)
+    "responsavel": "", (String)
+    "endereco": "", (String)
+    "data": "", (String)
+    "hora": "", (String)
+    "status": "", (String) - Valores: ["concluida", "em andamento", "pendente"]
+}
+```
+<!-- "data finalizacao": "", (String)
+"hora finalizacao": "", (String) -->
 
 * **Concluida:** Deve aparecer no histórico;
 * **Em andamento:** Deve aparecer na tela de ocorrências;

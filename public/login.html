@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link id="themeStylesheet" rel="stylesheet" type="text/css" href="css/estilo.css">
     <link rel="icon" type="image/x-icon" href="imgs/favicon_io/favicon.png">
 </head>
 
 <body id="body-login">
     <div class="login-container">
         <h2>Login</h2>
+        <div class="sidebarimg-container">
+            <img class="sidebarimg" src="imgs/contrast.png" onclick="toggleTheme()" alt="">
+            <img class="sidebarimg" src="imgs/diminuirfonte.png" onclick="diminuirFonte()" alt="">
+            <img class="sidebarimg" src="imgs/aumentarfonte.png" onclick="aumentarFonte()" alt="">
+          </div>
         <!-- <form action="/login" method="POST"> -->
         <form action="/painel">
             <div class="input-group">
@@ -28,6 +33,8 @@
             <p>Cadastre-se</p>
         </div>
     </div>
+
+    <script src="js/acessibilidade.js"></script>
 </body>
 
 </html>
